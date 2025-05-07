@@ -19,7 +19,7 @@ namespace umfgcloud.autenticacao.webapi.Controllers
         /// <param name="dto">Dados de cadastro do usuário, todos são obrigatórios</param>
         /// <returns></returns>
         [HttpPost("registar")]
-        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> RegistrarUsuarioAsync(
             [FromBody] UsuarioDTO.RegistrarRequest dto)
@@ -31,7 +31,7 @@ namespace umfgcloud.autenticacao.webapi.Controllers
 
                 await _servico.RegistrarUsuarioAsync(dto);
 
-                return Created();
+                return Ok();
             }
             catch (Exception ex)
             {
