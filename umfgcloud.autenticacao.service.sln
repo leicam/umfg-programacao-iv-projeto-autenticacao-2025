@@ -19,6 +19,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "umfgcloud.autenticacao.apli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "umfgcloud.apresentacao.identityRepositorio", "umfgcloud.apresentacao.identityRepositorio\umfgcloud.apresentacao.identityRepositorio.csproj", "{651B5E8B-DFF0-408E-A9F2-C5C3AA967441}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		umfgcloud.autenticacao.webapi\Dockerfile = umfgcloud.autenticacao.webapi\Dockerfile
+		Dockerfile_old. = Dockerfile_old.
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,5 +57,8 @@ Global
 		{41E49F94-947F-4E15-B8AC-31DE478F2AEA} = {6CF71ADA-62BD-444D-BB2A-505CD852C286}
 		{07AFEB9D-A4CF-497B-866E-44A207D1549D} = {7812A2AD-0178-4B40-9EB7-8E2D8E51B603}
 		{651B5E8B-DFF0-408E-A9F2-C5C3AA967441} = {44A2E304-E24F-4193-810E-57C50BDA946E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {38B8AD18-4C91-4F69-925A-BF7FDA1322FD}
 	EndGlobalSection
 EndGlobal
