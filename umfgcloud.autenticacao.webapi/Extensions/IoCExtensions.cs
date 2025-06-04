@@ -8,12 +8,14 @@ namespace umfgcloud.autenticacao.webapi.Extensions;
 
 internal static class IoCExtensions
 {
+    private const string C_STAGING = "Server=mysql.uhserver.com;Port=3306;Database=umfgauts01;Uid=umfg1;Pwd=Ads@2025;";
+
     internal static void RegistrarServicos(
         this IServiceCollection services,
         IConfiguration configuration)
     {
         var conexao = configuration
-            .GetConnectionString("MySqlConnection") ?? string.Empty;
+            .GetConnectionString("MySqlConnection") ?? C_STAGING;
 
         services.AddDbContext<MySqlContexto>(option => 
             option.UseMySQL(conexao), ServiceLifetime.Scoped);
