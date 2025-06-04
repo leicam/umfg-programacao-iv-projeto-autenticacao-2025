@@ -30,5 +30,8 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 
+# Defina o ambiente aqui (por exemplo, Development, Staging ou Production)
+ENV ASPNETCORE_ENVIRONMENT=Staging
+
 # Configura a porta do ASP.NET Core para usar o $PORT do Heroku e executa a API
 CMD ASPNETCORE_URLS="http://*:$PORT" dotnet umfgcloud.autenticacao.webapi.dll
