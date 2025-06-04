@@ -14,11 +14,11 @@ internal static class IoCExtensions
         this IServiceCollection services,
         IConfiguration configuration)
     {
-        var conexao = configuration
-            .GetConnectionString("MySqlConnection") ?? C_STAGING;
+        //var conexao = configuration
+        //    .GetConnectionString("MySqlConnection") ?? C_STAGING;
 
         services.AddDbContext<MySqlContexto>(option => 
-            option.UseMySQL(conexao), ServiceLifetime.Scoped);
+            option.UseMySQL(C_STAGING), ServiceLifetime.Scoped);
 
         services
             .AddDefaultIdentity<IdentityUser>()
